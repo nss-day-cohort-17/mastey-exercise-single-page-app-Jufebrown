@@ -1,3 +1,12 @@
+/*header styling*/
+
+.description-edit {
+  width: 50%;
+  margin: 15px;
+}
+
+
+
 /*footer styling*/
 html {
   position: relative;
