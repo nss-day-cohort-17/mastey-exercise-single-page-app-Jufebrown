@@ -1,0 +1,39 @@
+{
+  "cars": [
+    {
+      "make": "Nissan",
+      "model": "Maxima",
+      "year": "1990",
+      "price": "5996",
+      "description": "This is a 1990 Nissan Maxima with only 250000 miles on it. Standard transmission. Leather seats, power everything. Driver window is missing with plastic sheeting taped over the opening. Clutch has a tendency to burn out. Great starter car."
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Nova",
+      "year": "1986",
+      "price": "9041",
+      "description": "Chevy's take on the Toyota Camry - this beauty has minimal rust, AM radio and only 450000 miles."
+    },
+    {
+      "make": "Saturn",
+      "model": "Saturn",
+      "year": "1999",
+      "price": "8999",
+      "description": "This is the legend that started the Saturn line. It features fiberglass body panels and a tape deck. Only 150000 miles!"
+    },
+    {
+      "make": "Mitsubishi",
+      "model": "Mirage",
+      "year": "2001",
+      "price": "24895",
+      "description": "You gotta love a car with a CD player. If you're lucky and you hit the dash just right, the one in this car might even work. 280000 miles."
+    },
+    {
+      "make": "Honda",
+      "model": "Accord (hybrid)",
+      "year": "2015",
+      "price": "2499",
+      "description": "This one is OK if you don't want character or high maintenance. 80000 miles."
+    }
+  ]
+}
