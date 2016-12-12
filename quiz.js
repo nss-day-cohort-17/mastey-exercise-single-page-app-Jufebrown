@@ -35,6 +35,7 @@ function newCard(inventoryObj) {
   descriptionP.classList.add("description");
   descriptionP.innerHTML = inventoryObj.description;
   newCard.appendChild(descriptionP);
+  cardArray.push(newCard);
 }
 
 function newRow() {
