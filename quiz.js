@@ -40,7 +40,7 @@ function newCard(inventoryObj) {
 
 function newRow() {
   var newRowDiv = document.createElement("div");
-  newRowDiv.classList.add("row");
+  newRowDiv.classList.add("row", "cardRow");
   rowArray.push(newRowDiv);
 }
 
