@@ -78,10 +78,18 @@ function cardOn(e) {
     currentCard = e.target
   }
   console.log(currentCard);
+  highlightCard(currentCard, "#eeffe0")
 }
 
 function cardOff(e) {
   editMode = false;
+  var actualTarget = event.target.nodeName.toLowerCase();
+  if (actualTarget === "h5" || actualTarget === "p") {
+    currentCard = event.target.offsetParent;
+  } else {
+    currentCard = e.target;
+  }
+  revertCard(currentCard);
 }
 
 function cardClick (e) {
