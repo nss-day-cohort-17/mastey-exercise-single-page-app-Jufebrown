@@ -1,6 +1,7 @@
 var inventory = [];
 var rowArray = [];
 var cardArray = [];
+var editMode = false;
 
 function putCardsInRows() {
   var whichRow = -1;
@@ -55,11 +56,12 @@ function typeInInput(e) {
 }
 
 function cardOn() {
+  editMode = true;
 
 }
 
 function cardOff() {
-
+  editMode = false;
 }
 
 function cardClick (e) {
