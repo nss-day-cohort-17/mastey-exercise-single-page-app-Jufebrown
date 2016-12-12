@@ -3,8 +3,12 @@ var rowArray = [];
 var cardArray = [];
 
 function putCardsInRows() {
+  var whichRow = 0;
   for (var i = 0; i < cardArray.length; i++) {
-    cardArray[i]
+    if ((i % 3) === 1) {
+      whichRow++;
+    }
+    rowArray[whichRow].appendChild(cardArray[i])
   }
 }
 
