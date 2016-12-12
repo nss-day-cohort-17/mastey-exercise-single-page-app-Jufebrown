@@ -5,7 +5,9 @@
   margin: 15px;
 }
 
-
+.card-wrapper {
+  margin-top: 57px;
+}
 
 /*footer styling*/
 html {
