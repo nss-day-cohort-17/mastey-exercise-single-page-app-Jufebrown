@@ -50,6 +50,13 @@ function publishRows() {
   }
 }
 
+function activateEvents() {
+  var textInput = document.querySelector(".description-edit");
+  textInput.addEventListener("keyup", enterOnInput);
+  document.querySelector("click", cardClick);
+
+}
+
 function populatePage (inventory) {
   // Loop over the inventory and populate the page
   for (var i = 0; i < inventory.length; i++) {
