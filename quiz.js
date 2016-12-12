@@ -58,6 +58,16 @@ function typeInInput(e) {
 
 }
 
+function highlightCard(currentCard, color) {
+  currentCard.style.backgroundColor = color;
+  currentCard.style.borderWidth = "3px";
+}
+
+function revertCard(currentCard) {
+  currentCard.style.backgroundColor = "white";
+  currentCard.style.borderWidth = "1px";
+}
+
 function cardOn(e) {
   editMode = true;
   var currentCard;
