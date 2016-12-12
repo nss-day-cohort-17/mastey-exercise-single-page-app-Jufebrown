@@ -14,33 +14,33 @@ function putCardsInRows() {
 
 function newCard(inventoryObj) {
   var newCard = document.createElement("article");
-  newCard.addClass("col-md-4");
+  newCard.className("col-md-4");
   var makeP = document.createElement("p");
-  makeP.addClass("make");
+  makeP.className("make");
   makeP.innerHTML = inventoryObj.make;
   newCard.appendChild(makeP);
   var modelP = document.createElement("p");
-  modelP.addClass("model");
+  modelP.className("model");
   modelP.innerHTML = inventoryObj.model;
   newCard.appendChild(modelP);
   var yearP = document.createElement("p");
-  yearP.addClass("year");
+  yearP.className("year");
   yearP.innerHTML = inventoryObj.year;
   newCard.appendChild(yearP);
   var priceP = document.createElement("p");
-  priceP.addClass("price");
+  priceP.className("price");
   priceP.innerHTML = inventoryObj.price;
   newCard.appendChild(priceP);
   var descriptionP = document.createElement("p");
-  descriptionP.addClass("description");
+  descriptionP.className("description");
   descriptionP.innerHTML = inventoryObj.description;
   newCard.appendChild(descriptionP);
 }
 
 function newRow() {
   var newRowDiv = document.createElement("div");
-  newRowDiv.addClass("row");
-  newRowDiv.addClass(`addedRow${rowCounter}`);
+  newRowDiv.className("row");
+  newRowDiv.className(`addedRow${rowCounter}`);
   rowArray.push(newRowDiv)
 }
 
