@@ -41,4 +41,4 @@ function loadInventory (callback) {
   inventoryLoader.send();
 }
 
-loadInventory();
+loadInventory(populatePage);
