@@ -51,7 +51,7 @@ function populatePage (inventory) {
       newCard(inventory[i]);
     }
   }
-
+  publishRows();
   // Now that the DOM is loaded, establish all the event listeners needed
   activateEvents();
 }
