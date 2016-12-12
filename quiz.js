@@ -2,6 +2,11 @@ var inventory = [];
 var rowCounter = 0;
 var rowArray = [];
 var cardCounter = 0;
+var cardArray = [];
+
+function putCardsInRows() {
+
+}
 
 function newCard(inventoryObj) {
   cardCounter++;
