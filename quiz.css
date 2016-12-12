@@ -1,15 +1,36 @@
 /*header styling*/
 .main-nav {
-  background-color: #e2e2e2;
+  background-color: white;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
-/*.nav-container {
-  background-color: #e2e2e2;
-}*/
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.brand-wrapper {
+  margin-left: 50px;
+  margin-top: 7px;
+}
+
+.input-wrapper {
+  margin-left: 5px;
+  width: 50%;
+}
+
+.towtruck-wrapper {
+  margin-right: 8%;
+}
 
 .description-edit {
-  width: 50%;
-  margin: 15px;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 4px;
 }
 
 .brand {
