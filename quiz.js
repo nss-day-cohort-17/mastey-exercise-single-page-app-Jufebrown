@@ -3,7 +3,8 @@ var rowCounter = 0;
 
 function newRow() {
   rowCounter++;
-  document.createElement("div");
+  var newDiv = document.createElement("div");
+  newDiv.addClass("row");
 
 }
 
