@@ -1,15 +1,18 @@
 var inventory = [];
 var rowCounter = 0;
+var rowArray = [];
 
-function newCard() {
-
+function newCard(inventoryObj) {
+  var newCard = document.createElement("article");
+  newCard.addClass("col-md-4")
 }
 
 function newRow() {
   rowCounter++;
-  var newDiv = document.createElement("div");
-  newDiv.addClass("row");
-  newDiv.addClass(`addedRow${rowCounter}`)
+  var newRowDiv = document.createElement("div");
+  newRowDiv.addClass("row");
+  newRowDiv.addClass(`addedRow${rowCounter}`);
+  rowArray.push(newRowDiv)
 }
 
 function populatePage (inventory) {
