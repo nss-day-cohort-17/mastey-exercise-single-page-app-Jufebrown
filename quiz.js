@@ -1,11 +1,15 @@
 var inventory = [];
 var rowCounter = 0;
 
+function newCard() {
+
+}
+
 function newRow() {
   rowCounter++;
   var newDiv = document.createElement("div");
   newDiv.addClass("row");
-
+  newDiv.addClass(`addedRow${rowCounter}`)
 }
 
 function populatePage (inventory) {
