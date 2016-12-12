@@ -77,8 +77,8 @@ function loadInventory (callback) {
     for (var i = 0; i < data.cars.length; i++) {
       inventory[i] = data.cars[i]
     }
-    console.log(inventory);
-    populatePage();
+    console.log("inventory[]",inventory);
+    populatePage(inventory);
   });
   inventoryLoader.open('GET', 'inventory.json');
   inventoryLoader.send();
