@@ -100,6 +100,8 @@ function cardClick (e) {
     } else {
       cardOff(e);
     }
+  } else {
+    cardOff(e);
   }
 }
 
