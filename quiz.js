@@ -76,7 +76,7 @@ function populatePage (inventory) {
 // Load the inventory and send a callback function to be
 // invoked after the process is complete
 
-function loadInventory (callback) {
+function loadInventory () {
   var inventoryLoader = new XMLHttpRequest();
 
   inventoryLoader.addEventListener("load", function (e) {
@@ -92,4 +92,4 @@ function loadInventory (callback) {
   inventoryLoader.send();
 }
 
-loadInventory(populatePage);
+loadInventory();
