@@ -55,17 +55,31 @@ function typeInInput(e) {
 
 }
 
-function cardOn() {
+function cardOn(e) {
   editMode = true;
-
+  var currentCard;
+  var actualTarget = event.target.nodeName.toLowerCase();
+  if (actualTarget === "h5" || actualTarget === "p") {
+    currentCard = event.target.offsetParent;
+  } else {
+    currentCard = e.target
+  }
+  console.log(currentCard);
 }
 
-function cardOff() {
+function cardOff(e) {
   editMode = false;
 }
 
 function cardClick (e) {
-
+  var cardYes = e.target.nodeName.toLowerCase();
+  if (cardYes === "article" || cardYes === "h5" || cardYes === "p") {
+    if (editMode === false) {
+      cardOn(e);
+    } else {
+      cardOff(e);
+    }
+  }
 }
 
 function activateEvents() {
@@ -87,7 +101,7 @@ function populatePage (inventory) {
   putCardsInRows();
   publishRows();
   // Now that the DOM is loaded, establish all the event listeners needed
-  // activateEvents();
+  activateEvents();
 }
 
 // Load the inventory and send a callback function to be
