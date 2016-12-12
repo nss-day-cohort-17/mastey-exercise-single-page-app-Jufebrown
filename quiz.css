@@ -9,7 +9,9 @@
   margin-top: 25px;
 }
 
-
+.card {
+  border: 1px solid black;
+}
 
 
 
