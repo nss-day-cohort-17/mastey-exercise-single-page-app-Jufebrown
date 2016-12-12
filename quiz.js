@@ -2,6 +2,7 @@ var inventory = [];
 var rowArray = [];
 var cardArray = [];
 var editMode = false;
+var cardCounter = 0;
 
 function putCardsInRows() {
   var whichRow = -1;
@@ -14,8 +15,10 @@ function putCardsInRows() {
 }
 
 function newCard(inventoryObj) {
+  cardCounter++
+  var uniqueClass = "card" + cardCounter;
   var newCard = document.createElement("article");
-  newCard.classList.add("col-md-4", "card");
+  newCard.classList.add("col-md-4", "card", uniqueClass);
   var makeP = document.createElement("p");
   makeP.classList.add("make");
   makeP.innerHTML = "<h5>Make: </h5>" + inventoryObj.make;
