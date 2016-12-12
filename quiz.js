@@ -35,6 +35,12 @@ function newRow() {
   rowArray.push(newRowDiv)
 }
 
+function publishRows() {
+  for (i = 0; i < rowArray.length; i++) {
+    document.querySelector(".card-wrapper").appendChild(rowArray[i]);
+  }
+}
+
 function populatePage (inventory) {
   // Loop over the inventory and populate the page
   for (var i = 0; i < inventory.length; i++) {
