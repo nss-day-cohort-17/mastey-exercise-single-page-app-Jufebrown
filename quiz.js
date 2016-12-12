@@ -1,9 +1,10 @@
 var inventory = [];
 var rowCounter = 0;
 var rowArray = [];
-var cardCounter = 1;
+var cardCounter = 0;
 
 function newCard(inventoryObj) {
+  cardCounter++;
   var newCard = document.createElement("article");
   newCard.addClass("col-md-4");
   var makeP = document.createElement("p");
@@ -26,7 +27,6 @@ function newCard(inventoryObj) {
   descriptionP.addClass("description");
   descriptionP.innerHTML = inventoryObj.description;
   newCard.appendChild(descriptionP);
-  cardCounter++;
 }
 
 function newRow() {
