@@ -14,7 +14,7 @@ function putCardsInRows() {
 
 function newCard(inventoryObj) {
   var newCard = document.createElement("article");
-  newCard.classList.add("col-md-4");
+  newCard.classList.add("col-md-4", "card");
   var makeP = document.createElement("p");
   makeP.classList.add("make");
   makeP.innerHTML = "Make: " + inventoryObj.make;
