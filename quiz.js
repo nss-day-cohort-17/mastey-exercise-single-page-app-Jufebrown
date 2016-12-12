@@ -3,12 +3,12 @@ var rowArray = [];
 var cardArray = [];
 
 function putCardsInRows() {
-  var whichRow = 0;
+  var whichRow = -1;
   for (var i = 0; i < cardArray.length; i++) {
-    if ((i % 3) === 1) {
-      whichRow++;
+    if (((i + 1) % 3) === 1) {
+      whichRow += 1;
     }
-    rowArray[whichRow].appendChild(cardArray[i])
+    rowArray[whichRow].appendChild(cardArray[i]);
   }
 }
 
@@ -40,8 +40,8 @@ function newCard(inventoryObj) {
 
 function newRow() {
   var newRowDiv = document.createElement("div");
-  newRowDiv.classList.add(`addedRow${rowCounter} row`);
-  rowArray.push(newRowDiv)
+  newRowDiv.classList.add("row");
+  rowArray.push(newRowDiv);
 }
 
 function publishRows() {
@@ -53,7 +53,7 @@ function publishRows() {
 function populatePage (inventory) {
   // Loop over the inventory and populate the page
   for (var i = 0; i < inventory.length; i++) {
-    if ((inventory[i] % 3) === 1) {
+    if (((i+1) % 3) === 1) {
       newRow();
       newCard(inventory[i]);
     } else {
