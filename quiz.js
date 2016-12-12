@@ -1,15 +1,14 @@
 var inventory = [];
-var rowCounter = 0;
 var rowArray = [];
-var cardCounter = 0;
 var cardArray = [];
 
 function putCardsInRows() {
-
+  for (var i = 0; i < cardArray.length; i++) {
+    cardArray[i]
+  }
 }
 
 function newCard(inventoryObj) {
-  cardCounter++;
   var newCard = document.createElement("article");
   newCard.addClass("col-md-4");
   var makeP = document.createElement("p");
@@ -35,7 +34,6 @@ function newCard(inventoryObj) {
 }
 
 function newRow() {
-  rowCounter++;
   var newRowDiv = document.createElement("div");
   newRowDiv.addClass("row");
   newRowDiv.addClass(`addedRow${rowCounter}`);
@@ -60,7 +58,7 @@ function populatePage (inventory) {
   }
   publishRows();
   // Now that the DOM is loaded, establish all the event listeners needed
-  activateEvents();
+  // activateEvents();
 }
 
 // Load the inventory and send a callback function to be
