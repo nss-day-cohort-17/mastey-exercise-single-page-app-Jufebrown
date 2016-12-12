@@ -2,7 +2,7 @@ var inventory = [];
 var rowArray = [];
 var cardArray = [];
 var editMode = false;
-var cardCounter = 0;
+var currentCard;
 
 function putCardsInRows() {
   var whichRow = -1;
@@ -15,10 +15,8 @@ function putCardsInRows() {
 }
 
 function newCard(inventoryObj) {
-  cardCounter++
-  var uniqueClass = "card" + cardCounter;
   var newCard = document.createElement("article");
-  newCard.classList.add("col-md-4", "card", uniqueClass);
+  newCard.classList.add("col-md-4", "card");
   var makeP = document.createElement("p");
   makeP.classList.add("make");
   makeP.innerHTML = "<h5>Make: </h5>" + inventoryObj.make;
@@ -70,7 +68,6 @@ function revertCard(currentCard) {
 
 function cardOn(e) {
   editMode = true;
-  var currentCard;
   var actualTarget = event.target.nodeName.toLowerCase();
   if (actualTarget === "h5" || actualTarget === "p") {
     currentCard = event.target.offsetParent;
