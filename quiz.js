@@ -1,6 +1,11 @@
 var inventory = [];
+var rowCounter = 0;
 
+function newRow() {
+  rowCounter++;
+  document.createElement("div");
 
+}
 
 function populatePage (inventory) {
   // Loop over the inventory and populate the page
