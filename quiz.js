@@ -1,13 +1,15 @@
 var inventory = [];
 
+
+
 function populatePage (inventory) {
   // Loop over the inventory and populate the page
   for (var i = 0; i < inventory.length; i++) {
-    if ((inventory.length % 3) === 1) {
+    if ((inventory[i] % 3) === 1) {
       newRow();
-      newCard();
+      newCard(inventory[i]);
     } else {
-      newCard();
+      newCard(inventory[i]);
     }
   }
 
