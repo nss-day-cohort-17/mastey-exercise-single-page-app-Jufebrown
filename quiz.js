@@ -50,7 +50,15 @@ function publishRows() {
   }
 }
 
-function enterOnInput(e) {
+function typeInInput(e) {
+
+}
+
+function cardOn() {
+
+}
+
+function cardOff() {
 
 }
 
@@ -60,7 +68,7 @@ function cardClick (e) {
 
 function activateEvents() {
   var textInput = document.querySelector(".description-edit");
-  textInput.addEventListener("keyup", enterOnInput;
+  textInput.addEventListener("keyup", typeInInput);
   document.querySelector("body").addEventListener("click", cardClick);
 }
 
