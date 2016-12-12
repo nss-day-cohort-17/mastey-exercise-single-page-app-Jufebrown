@@ -17,23 +17,23 @@ function newCard(inventoryObj) {
   newCard.classList.add("col-md-4", "card");
   var makeP = document.createElement("p");
   makeP.classList.add("make");
-  makeP.innerHTML = "Make: " + inventoryObj.make;
+  makeP.innerHTML = "<h5>Make: </h5>" + inventoryObj.make;
   newCard.appendChild(makeP);
   var modelP = document.createElement("p");
   modelP.classList.add("model");
-  modelP.innerHTML = "Model: " + inventoryObj.model;
+  modelP.innerHTML = "<h5>Model: </h5>" + inventoryObj.model;
   newCard.appendChild(modelP);
   var yearP = document.createElement("p");
   yearP.classList.add("year");
-  yearP.innerHTML = "Year: " + inventoryObj.year;
+  yearP.innerHTML = "<h5>Year: </h5>" + inventoryObj.year;
   newCard.appendChild(yearP);
   var priceP = document.createElement("p");
   priceP.classList.add("price");
-  priceP.innerHTML = "Price: " + inventoryObj.price;
+  priceP.innerHTML = "<h5>Price: </h5>" + inventoryObj.price;
   newCard.appendChild(priceP);
   var descriptionP = document.createElement("p");
   descriptionP.classList.add("description");
-  descriptionP.innerHTML = "Description: " + inventoryObj.description;
+  descriptionP.innerHTML = "<h5>Description: </h5>" + inventoryObj.description;
   newCard.appendChild(descriptionP);
   cardArray.push(newCard);
 }
