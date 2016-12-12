@@ -91,13 +91,16 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 50px;
-  background-color: #e2e2e2;
+  background-color: white;
 }
 
 .main-footer {
   background-image: url("images/porsche-footer.png");
   background-size: auto 50px;
   background-repeat: repeat-x;
+  -webkit-box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
 }
 
 
