@@ -14,10 +14,24 @@
 .card {
   border: 1px solid black;
   border-radius: 10px;
-  width: 30%;
+  width: 31%;
   -webkit-box-shadow: 10px 10px 14px -5px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 14px -5px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 14px -5px rgba(0,0,0,0.75);
+}
+
+.card p h5 {
+  margin: 2px 5px 0 0;
+}
+
+.card p {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.description {
+  flex-wrap: wrap;
 }
 
 
