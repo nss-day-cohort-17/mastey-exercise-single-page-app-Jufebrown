@@ -91,7 +91,7 @@ function cardOff(e) {
   document.querySelector(".description-edit").value = "";
 }
 
-function cardClick (e) {
+function cardClick(e) {
   var cardYes = e.target.nodeName.toLowerCase();
   if (cardYes === "article" || cardYes === "h5" || cardYes === "p") {
     if (editMode === false) {
@@ -104,13 +104,17 @@ function cardClick (e) {
   }
 }
 
+function typeInInput() {
+
+}
+
 function activateEvents() {
   var textInput = document.querySelector(".description-edit");
   textInput.addEventListener("keyup", typeInInput);
   document.querySelector("body").addEventListener("click", cardClick);
 }
 
-function populatePage (inventory) {
+function populatePage(inventory) {
   // Loop over the inventory and populate the page
   for (var i = 0; i < inventory.length; i++) {
     if (((i+1) % 3) === 1) {
@@ -129,7 +133,7 @@ function populatePage (inventory) {
 // Load the inventory and send a callback function to be
 // invoked after the process is complete
 
-function loadInventory () {
+function loadInventory() {
   var inventoryLoader = new XMLHttpRequest();
 
   inventoryLoader.addEventListener("load", function (e) {
