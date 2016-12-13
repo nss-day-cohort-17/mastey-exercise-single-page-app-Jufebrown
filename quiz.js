@@ -66,6 +66,13 @@ function revertCard(currentCard) {
   currentCard.style.borderWidth = "1px";
 }
 
+function editCard(currentCard) {
+  var editField = document.querySelector(".description-edit");
+  editField.focus();
+  editField.value = currentCard.lastChild.lastChild.textContent;
+  currentCard.lastChild.textContent = document.querySelector(".description-edit").value;
+}
+
 function cardOn(e) {
   editMode = true;
   var actualTarget = event.target.nodeName.toLowerCase();
@@ -76,6 +83,7 @@ function cardOn(e) {
   }
   console.log(currentCard);
   highlightCard(currentCard, "#eeffe0")
+  editCard(currentCard);
 }
 
 function cardOff(e) {
