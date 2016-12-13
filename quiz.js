@@ -70,7 +70,6 @@ function editCard(currentCard) {
   var editField = document.querySelector(".description-edit");
   editField.focus();
   editField.value = currentCard.lastChild.lastChild.textContent;
-  currentCard.lastChild.textContent = document.querySelector(".description-edit").value;
 }
 
 function cardOn(e) {
@@ -89,6 +88,7 @@ function cardOn(e) {
 function cardOff(e) {
   editMode = false;
   revertCard(currentCard);
+  document.querySelector(".description-edit").value = "";
 }
 
 function cardClick (e) {
