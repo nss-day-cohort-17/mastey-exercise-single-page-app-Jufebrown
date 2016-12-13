@@ -3,6 +3,7 @@ var rowArray = [];
 var cardArray = [];
 var editMode = false;
 var currentCard;
+var editField = document.querySelector(".description-edit");
 
 function putCardsInRows() {
   var whichRow = -1;
@@ -67,7 +68,6 @@ function revertCard(currentCard) {
 }
 
 function editCard(currentCard) {
-  var editField = document.querySelector(".description-edit");
   editField.focus();
   editField.value = currentCard.lastChild.lastChild.textContent;
 }
@@ -104,8 +104,16 @@ function cardClick(e) {
   }
 }
 
-function typeInInput() {
-
+function typeInInput(e) {
+  console.log(e)
+  if (editMode === true) {
+    if (e.code === "Enter") {
+      cardOff(e);
+    } else {
+      console.log(currentCard)
+      currentCard.lastChild.lastChild.textContent = editField.value;
+    }
+  }
 }
 
 function activateEvents() {
