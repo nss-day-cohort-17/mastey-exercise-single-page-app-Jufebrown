@@ -80,7 +80,6 @@ function cardOn(e) {
   } else {
     currentCard = e.target
   }
-  console.log(currentCard);
   highlightCard(currentCard, "#eeffe0")
   editCard(currentCard);
 }
@@ -105,12 +104,10 @@ function cardClick(e) {
 }
 
 function typeInInput(e) {
-  console.log(e)
   if (editMode === true) {
     if (e.code === "Enter") {
       cardOff(e);
     } else {
-      console.log(currentCard)
       currentCard.lastChild.lastChild.textContent = editField.value;
     }
   }
@@ -146,11 +143,9 @@ function loadInventory() {
 
   inventoryLoader.addEventListener("load", function (e) {
     var data = JSON.parse(e.target.responseText);
-    console.log(data)
     for (var i = 0; i < data.cars.length; i++) {
       inventory[i] = data.cars[i]
     }
-    console.log("inventory[]",inventory);
     populatePage(inventory);
   });
   inventoryLoader.open('GET', 'inventory.json');
