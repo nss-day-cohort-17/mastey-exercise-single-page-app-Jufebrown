@@ -1,0 +1,127 @@
+/*header styling*/
+.main-nav {
+  background-color: white;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.brand-wrapper {
+  margin-left: 50px;
+  margin-top: 7px;
+}
+
+.input-wrapper {
+  margin-left: 5px;
+  width: 50%;
+}
+
+.towtruck-wrapper {
+  margin-right: 8%;
+}
+
+.description-edit {
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+.brand {
+  color: black;
+  text-shadow: 0px 0px 4px rgba(24, 104, 8, 1);
+}
+
+
+/*body styling*/
+body {
+  background-image: url("images/bling.png");
+}
+
+.cardRow {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 31%;
+  -webkit-box-shadow: 10px 10px 14px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 14px -5px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 14px -5px rgba(0,0,0,0.75);
+  margin: 2.5%;
+}
+
+.card p h5 {
+  margin: 2px 5px 0 0;
+}
+
+.card p {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.description {
+  flex-wrap: wrap;
+}
+
+
+
+
+/*footer styling*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  background-color: white;
+}
+
+.main-footer {
+  background-image: url("images/porsche-footer.png");
+  background-size: auto 50px;
+  background-repeat: repeat-x;
+  -webkit-box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
