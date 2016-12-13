@@ -5,6 +5,7 @@ var editMode = false;
 var currentCard;
 var editField = document.querySelector(".description-edit");
 
+// loop over cards and put them in the rows so that there are no more than 3 in a row
 function putCardsInRows() {
   var whichRow = -1;
   for (var i = 0; i < cardArray.length; i++) {
@@ -15,6 +16,7 @@ function putCardsInRows() {
   }
 }
 
+// loads json info into a card
 function newCard(inventoryObj) {
   var newCard = document.createElement("article");
   newCard.classList.add("col-md-4", "card");
@@ -41,37 +43,39 @@ function newCard(inventoryObj) {
   cardArray.push(newCard);
 }
 
+// creates a new row to place cards in
 function newRow() {
   var newRowDiv = document.createElement("div");
   newRowDiv.classList.add("row", "cardRow");
   rowArray.push(newRowDiv);
 }
 
+// appends rows to card-wrapper div
 function publishRows() {
   for (i = 0; i < rowArray.length; i++) {
     document.querySelector(".card-wrapper").appendChild(rowArray[i]);
   }
 }
 
-function typeInInput(e) {
-
-}
-
+// gives selected card thicker border and changes background color
 function highlightCard(currentCard, color) {
   currentCard.style.backgroundColor = color;
   currentCard.style.borderWidth = "3px";
 }
 
+// returns card to default styling
 function revertCard(currentCard) {
   currentCard.style.backgroundColor = "white";
   currentCard.style.borderWidth = "1px";
 }
 
+// puts focus on edit field and puts text from card description in field
 function editCard(currentCard) {
   editField.focus();
   editField.value = currentCard.lastChild.lastChild.textContent;
 }
 
+// makes sure currentCard is set correctly no matter where in the card the user clicks, sets up highlighting and editing
 function cardOn(e) {
   editMode = true;
   var actualTarget = event.target.nodeName.toLowerCase();
@@ -84,12 +88,14 @@ function cardOn(e) {
   editCard(currentCard);
 }
 
+// function for when user clicks off of card or hits enter when editing
 function cardOff(e) {
   editMode = false;
   revertCard(currentCard);
   document.querySelector(".description-edit").value = "";
 }
 
+// looks at whether user clicked on a card or one of it's children
 function cardClick(e) {
   var cardYes = e.target.nodeName.toLowerCase();
   if (cardYes === "article" || cardYes === "h5" || cardYes === "p") {
@@ -103,6 +109,7 @@ function cardClick(e) {
   }
 }
 
+// edits the description of the selected card
 function typeInInput(e) {
   if (editMode === true) {
     if (e.code === "Enter") {
@@ -113,12 +120,14 @@ function typeInInput(e) {
   }
 }
 
+// activates event listeners
 function activateEvents() {
   var textInput = document.querySelector(".description-edit");
   textInput.addEventListener("keyup", typeInInput);
   document.querySelector("body").addEventListener("click", cardClick);
 }
 
+// populates page with JSON data, calls activatesEvents when done
 function populatePage(inventory) {
   // Loop over the inventory and populate the page
   for (var i = 0; i < inventory.length; i++) {
@@ -137,7 +146,6 @@ function populatePage(inventory) {
 
 // Load the inventory and send a callback function to be
 // invoked after the process is complete
-
 function loadInventory() {
   var inventoryLoader = new XMLHttpRequest();
 
@@ -152,4 +160,5 @@ function loadInventory() {
   inventoryLoader.send();
 }
 
+// gets the whole ball rolling
 loadInventory();
